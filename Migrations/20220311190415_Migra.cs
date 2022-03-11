@@ -12,7 +12,7 @@ namespace Prueba.Migrations
                 {
                     IdProducto = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Descipcion = table.Column<string>(nullable: true)
+                    Descripcion = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

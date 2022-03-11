@@ -17,11 +17,15 @@
             </thead>
             <tbody>
                 @*Comentarios*@
+                @foreach (var item in Model)
+                {
                 <tr>
                     <td>
-                        Pantalon
+                        @Html.DisplayFor(modelItem => item.Descripcion)
                     </td>
                 </tr>
+                }
+                
             </tbody>
         </table>
     </body>

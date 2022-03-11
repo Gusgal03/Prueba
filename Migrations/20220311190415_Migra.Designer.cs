@@ -9,7 +9,7 @@ using Prueba.Models;
 namespace Prueba.Migrations
 {
     [DbContext(typeof(PruebaContext))]
-    [Migration("20220311182634_Migra")]
+    [Migration("20220311190415_Migra")]
     partial class Migra
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -27,7 +27,7 @@ namespace Prueba.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Descipcion")
+                    b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdProducto");
