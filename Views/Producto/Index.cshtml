@@ -1,0 +1,28 @@
+@model IEnumerable<Prueba.Models.Producto>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Productos</title>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descripcion)
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @*Comentarios*@
+                <tr>
+                    <td>
+                        Pantalon
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
