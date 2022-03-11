@@ -2,31 +2,26 @@
 
 <!DOCTYPE html>
 
-<html>
-    <head>
-        <title>Productos</title>
-    </head>
-    <body>
-        <table>
-            <thead>
-                <tr>
-                    <th>
-                        @Html.DisplayNameFor(model => model.Descripcion)
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                @*Comentarios*@
-                @foreach (var item in Model)
-                {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Descripcion)
-                    </td>
-                </tr>
-                }
-                
-            </tbody>
-        </table>
-    </body>
-</html>
+<table>
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @*Comentarios*@
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdProducto">Editar</a>
+            </td>
+        </tr>
+        }   
+    </tbody>
+</table>

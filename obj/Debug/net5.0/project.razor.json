@@ -15619,6 +15619,11 @@
   "RootNamespace": "Prueba",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\Producto\\Edit.cshtml",
+      "TargetPath": "Views\\Producto\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
