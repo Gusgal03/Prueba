@@ -70,11 +70,30 @@ namespace Prueba.Controllers
             return View(producto); 
         }
 
+        [HttpPost]
         public IActionResult Delete(int id) //De tipo post
         {
             var producto = _context.Producto.Find(id);
             _context.Producto.Remove(producto);
+            _context.SaveChanges();
+
             return RedirectToAction(nameof(Index));
+        }
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create([Bind("IdProducto, Descripcion")] Producto producto)
+        {
+            if(ModelState.IsValid)
+            {
+                _context.Add(producto);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            return View();
         }
     }
 }

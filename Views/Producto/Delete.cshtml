@@ -1,0 +1,20 @@
+@model Prueba.Models.Producto
+
+<h3>¿Está seguro de eliminar el siguiente registro?</h3>
+<div>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Descripcion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Descripcion)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdProducto"/>
+        <input type="submit" value="x"/>
+    </form>
+    <div>
+        <a asp-action="Index">Volver</a>
+    </div>
+</div>

@@ -15619,6 +15619,11 @@
   "RootNamespace": "Prueba",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\Producto\\Delete.cshtml",
+      "TargetPath": "Views\\Producto\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\Producto\\Edit.cshtml",
       "TargetPath": "Views\\Producto\\Edit.cshtml",
       "FileKind": "mvc"
@@ -15641,6 +15646,11 @@
     {
       "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gusg1\\OneDrive\\Documentos\\GitHub\\Prueba\\Views\\Producto\\Create.cshtml",
+      "TargetPath": "Views\\Producto\\Create.cshtml",
       "FileKind": "mvc"
     },
     {

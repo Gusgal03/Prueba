@@ -1,6 +1,8 @@
 @model IEnumerable<Prueba.Models.Producto>
 
-<!DOCTYPE html>
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
 
 <table>
     <thead>
@@ -20,6 +22,7 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdProducto">Editar</a>
+                <a asp-action="Delete" asp-route-id="@item.IdProducto">x</a>
             </td>
         </tr>
         }   
