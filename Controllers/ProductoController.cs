@@ -54,5 +54,27 @@ namespace Prueba.Controllers
             }
             return View(producto);
         }
+
+        public IActionResult Delete(int? id) //De tipo get
+        {
+            if(id == null)
+            {
+                return NotFound();
+            }
+            var producto = _context.Producto.FirstOrDefault(e => e.IdProducto == id); //FOD hace una búsqueda donde IdProducto sea igual a id
+            // cuando encuentre una coincidencia, asigna ese resultado a la variable Producto
+            if(producto == null)
+            {
+                return NotFound();
+            }
+            return View(producto); 
+        }
+
+        public IActionResult Delete(int id) //De tipo post
+        {
+            var producto = _context.Producto.Find(id);
+            _context.Producto.Remove(producto);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
