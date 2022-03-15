@@ -9,6 +9,12 @@
         <dd>
             @Html.DisplayFor(modelo => modelo.Descripcion)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(modelo => modelo.Cantidad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelo => modelo.Cantidad)
+        </dd>
     </dl>
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdProducto"/>

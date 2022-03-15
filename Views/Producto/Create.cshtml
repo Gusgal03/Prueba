@@ -3,15 +3,25 @@
 <h4>Productos</h4>
 
 <div>
-    <form aps-action="Create">
+    <form asp-action ="Create">
         <div asp-validation-summary="ModelOnly"></div>
         <div>
             <label asp-for="Descripcion"></label>
-            <input asp-fpr="Descripcion"/>
-            <span asp-validation-for="Descripcion"> </span>
+            <input asp-for="Descripcion"/>
+            <span asp-validation-for="Descripcion"></span>
         </div>
         <div>
-            <input type="submit" value="Guardar"/>
+            <label asp-for="Precio"></label>
+            <input asp-for="Precio"/>
+            <span asp-validation-for="Precio"></span>
+        </div>
+        <div>
+            <label asp-for="Cantidad"></label>
+            <input asp-for="Cantidad"/>
+            <span asp-validation-for="Cantidad"></span>
+        </div>
+        <div>
+            <input type="submit" value="Agregar"/>
         </div>
     </form>
 </div>

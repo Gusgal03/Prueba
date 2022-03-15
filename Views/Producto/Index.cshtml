@@ -1,7 +1,7 @@
 @model IEnumerable<Prueba.Models.Producto>
 
 <p>
-    <a asp-action="Create">Agregar</a>
+    <a asp-action="Create">Agregar Producto</a>
 </p>
 
 <table>
@@ -9,6 +9,12 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Precio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cantidad)
             </th>
         </tr>
     </thead>
@@ -19,6 +25,12 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Descripcion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Precio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cantidad)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.IdProducto">Editar</a>

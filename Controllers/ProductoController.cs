@@ -39,7 +39,7 @@ namespace Prueba.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(int id, [Bind("IdProducto, Descripcion")] Producto producto)
+        public IActionResult Edit(int id, [Bind("IdProducto, Descripcion, Precio, Cantidad")] Producto producto)
         {
             if(id!= producto.IdProducto)
             {
@@ -85,7 +85,7 @@ namespace Prueba.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create([Bind("IdProducto, Descripcion")] Producto producto)
+        public IActionResult Create(int id, [Bind("IdProducto, Descripcion, Precio, Cantidad")] Producto producto)
         {
             if(ModelState.IsValid)
             {

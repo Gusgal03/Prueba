@@ -25,8 +25,14 @@ namespace Prueba.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
                     b.Property<string>("Descripcion")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Precio")
+                        .HasColumnType("int");
 
                     b.HasKey("IdProducto");
 
