@@ -12,25 +12,25 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Prueba</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Producto" asp-action="Index">Productos</a>
-                        </li>
-                    </ul>
-                </div>
+        <nav>
+            <div class="nav-wrapper">
+            <a href="#!" class="brand-logo center">Tienda Cenati</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+                <li><a asp-controller="Producto" asp-action="Index">Productos</a></li>
+                <li><a href="collapsible.html">Carrito</a></li>
+                <li><a href="mobile.html">Historial de Compras</a></li>
+            </ul>
             </div>
         </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li><a asp-controller="Home" asp-action="Index">Inicio</a></li>
+            <li><a asp-controller="Producto" asp-action="Index">Productos</a></li>
+            <li><a href="collapsible.html">Carrito</a></li>
+            <li><a href="mobile.html">Historial de Compras</a></li>
+        </ul>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
@@ -48,5 +48,10 @@
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="~/js/materialize.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        $(document).ready(function(){
+        $('.sidenav').sidenav();
+         });
+    </script>
 </body>
 </html>
